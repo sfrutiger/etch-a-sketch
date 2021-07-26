@@ -1,0 +1,29 @@
+    #container {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-gap: 0;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+  }
+  
+  .gridItem {
+    border: 0.2px solid black;
+    background: grey;
+  }
+
+  .gridItemOn {
+      background: black;
+      
+  }
+
+  #clearBtn {
+      width: 100px;
+      height: 50px;
+      margin: 0 0 8px 0;
+      font-size: 15px;
+  }
+
+  #clearBtn:hover {
+      cursor: pointer;
+  }
