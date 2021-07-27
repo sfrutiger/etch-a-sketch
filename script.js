@@ -1,5 +1,5 @@
 //create grid////////////
-var gridSize = 16;
+var gridSize = 65;
 const container = document.getElementById("container");
 
 function makeRows(rows, cols) {
@@ -20,7 +20,6 @@ function makeRows(rows, cols) {
 }
 };
 makeRows(gridSize, gridSize);
-///////////////////////////////////
 
 
 //clear board on button click function
@@ -42,14 +41,8 @@ function removeElementsByClass(){
 //clear and redraw board with user selected size
 const clearbtn = document.querySelector('#clearBtn');
 clearBtn.addEventListener('click', () => {
-  var input = prompt("enter size of new sketchpad up to 80 pixels. (ex. 16 for a 16x16 pixel grid)")
-  userGridSize = input;
-  console.log(userGridSize);
   resetBoard();
   removeElementsByClass();
-  if (userGridSize > 0 && userGridSize <= 80) {
-    makeRows(parseInt(userGridSize), parseInt(userGridSize));
-  } else {
-    makeRows (16, 16);
-  }
-});
+  makeRows (gridSize, gridSize);
+  });
+
