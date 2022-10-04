@@ -15,7 +15,9 @@ function makeRows(rows, cols) {
   var elements = document.getElementsByClassName("gridItem");
   for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener("mouseover", function (event) {
-      event.target.className = "gridItemOn";
+      if (event.target.className !== "gridItem1111") {
+        event.target.className = event.target.className + 1;
+      }
     });
   }
 }
@@ -23,7 +25,9 @@ makeRows(gridSize, gridSize);
 
 //clear board on button click function
 function resetBoard() {
-  var onPixels = document.getElementsByClassName("gridItemOn");
+  var onPixels = document.querySelectorAll(
+    ".gridItem1, .gridItem11, .gridItem111, .gridItem1111"
+  );
   for (var i = onPixels.length - 1; i >= 0; i--) {
     onPixels[i].className = "gridItem";
   }
